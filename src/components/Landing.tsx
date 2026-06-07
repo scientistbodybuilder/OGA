@@ -103,7 +103,7 @@ const LandingPage = () => {
 
 
                         <div className='flex w-full items-center justify-center gap-4'>
-                            {landingPhotos.map((photo, index) => (
+                            {landingPhotos.map((_, index) => (
                                 <div className={`rounded-full h-3 w-3 ${index == landingIndex ? 'bg-(--accent)' : 'bg-(--accent-hover)'}`}
                                     key={index}>
                                 </div>
