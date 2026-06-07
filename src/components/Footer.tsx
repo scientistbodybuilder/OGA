@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaFacebookSquare, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -8,15 +8,15 @@ import { HashLink } from 'react-router-hash-link';
 const Footer = () => {  
 
     const { register, handleSubmit } = useForm()
-    const [openPrivacyPolicy, setOpenPrivacyPolicy] = useState(false);
-    const [openTermsAndConditions, setOpenTermsAndConditions] = useState(false);
+    // const [openPrivacyPolicy, setOpenPrivacyPolicy] = useState(false);
+    // const [openTermsAndConditions, setOpenTermsAndConditions] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [messageSentSuccess, setMessageSentSuccess] = useState<boolean | null>(null);
+    // const [messageSentSuccess, setMessageSentSuccess] = useState<boolean | null>(null);
 
     const sendMessage = async (data: any) => {
-        console.log('Sending message')
-        // setLoading(true)
-        // try {
+        console.log('Sending message: ',data)
+        setLoading(true)
+        try {
         // const result = await sendMessageContactForm(data)
         // if (result.success) {
         //     setMessageSentSuccess(true)
@@ -26,9 +26,9 @@ const Footer = () => {
         // } catch (e) {
         // console.error('Failed to send contact message ', e)
         // setMessageSentSuccess(false)
-        // } finally {
-        // setLoading(false)
-        // }
+        } finally {
+        setLoading(false)
+        }
     }
 
     return(
@@ -82,8 +82,8 @@ const Footer = () => {
             <button type='submit' className='flex items-center justify-center bg-(--accent) hover:bg-(--accent-hover) text-white py-1 cursor-pointer px-4 rounded-full mt-2 transition-colors'>
               {loading ? <img src='/gray_spinner.svg' className='h-6 w-6' /> : 'Send'}
             </button>
-            {messageSentSuccess && <p className='text-xs md:text-sm text-(--accent)'>Message sent successfully</p>}
-            {messageSentSuccess === false && <p className='text-xs md:text-sm text-(--accent)'>Message did not send</p>}
+            {/* {messageSentSuccess && <p className='text-xs md:text-sm text-(--accent)'>Message sent successfully</p>}
+            {messageSentSuccess === false && <p className='text-xs md:text-sm text-(--accent)'>Message did not send</p>} */}
           </form>
 
         </div>

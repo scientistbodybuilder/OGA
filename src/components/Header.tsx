@@ -1,6 +1,6 @@
 import { HashLink } from 'react-router-hash-link';
-import { GiHamburgerMenu } from "react-icons/gi";
-import { Link, useNavigate } from 'react-router-dom'
+// import { GiHamburgerMenu } from "react-icons/gi";
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
     const navigate = useNavigate()

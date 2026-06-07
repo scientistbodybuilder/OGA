@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 
 import landingPhoto from '../assets/images/landing_img.png'
@@ -7,7 +7,6 @@ import landingPhoto2 from '../assets/images/landing_img_2.png'
 //about icons
 import { GrMapLocation } from "react-icons/gr";
 import { TbTargetArrow } from "react-icons/tb";
-import { PiFlowerLotus } from "react-icons/pi";
 import { FaHandsPraying } from "react-icons/fa6";
 
 
@@ -61,7 +60,7 @@ const news = [
     ]
 
 const LandingPage = () => {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const [landingIndex, setLandingIndex] = useState(0)
 
