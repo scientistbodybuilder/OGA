@@ -8,6 +8,7 @@ import landingPhoto2 from '../assets/images/landing_img_2.png'
 import { GrMapLocation } from "react-icons/gr";
 import { TbTargetArrow } from "react-icons/tb";
 import { PiFlowerLotus } from "react-icons/pi";
+import { FaHandsPraying } from "react-icons/fa6";
 
 
 //community icons
@@ -136,21 +137,21 @@ In sha Allahu ta’ala, with Allah’s Permission, together: we can SPARC Our Go
                         <div className='relative flex flex-col items-start justify-start gap-6 bg-(--background) p-5 box-border rounded-md border border-[#ccc] hover:border-(--accent) duration-300'>
                             <h3 className='font-heading text-black font-medium text-lg xl:text-2xl'>Our Location</h3>
                             <GrMapLocation className='font-body h-10 w-10 absolute top-4 right-4 text-(--bg-accent)' />
-                            <p className='font-body text-(--neutral) text-sm xl:text-base text-wrap text-left'>We currently <br />operate in Ethiopia and Rwanda.</p>
+                            <p className='font-body text-(--neutral) text-sm xl:text-base text-wrap text-left'>Although centralized in Canada, OGA operates as an organization globally.</p>
 
                         </div>
 
                          <div className='relative flex flex-col items-start justify-start gap-6 bg-(--background) p-5 box-border rounded-md border border-[#ccc] hover:border-(--accent) duration-300'>
                             <h3 className='font-heading text-black font-medium text-lg xl:text-2xl'>Our Mission</h3>
                             <TbTargetArrow className='h-10 w-10 absolute top-4 right-4 text-(--bg-accent)' />
-                            <p className='font-body text-(--neutral) text-sm xl:text-base text-wrap text-left'>To ensure high-quality healthcare is accessible and readily available in every community.</p>
+                            <p className='font-body text-(--neutral) text-sm xl:text-base text-wrap text-left'>To seek Our Golden Age by supporting the next generation of Islamic scholars, scientists, and specialists across fields and disciplines.</p>
 
                         </div>
 
                          <div className='relative flex flex-col items-start justify-center gap-6 bg-(--background) p-5 box-border rounded-md border border-[#ccc] hover:border-(--accent) duration-300'>
                             <h3 className='font-heading text-black font-medium text-lg xl:text-2xl'>Our Vision</h3>
-                            <PiFlowerLotus className='h-10 w-10 absolute top-4 right-4 text-(--bg-accent)' />
-                            <p className='font-body text-(--neutral) text-sm xl:text-base text-wrap text-left'>To fundamentally redefine global health by pioneering the use of technology and innovation against the world's most urgent challenges.</p>
+                            <FaHandsPraying className='h-10 w-10 absolute top-4 right-4 text-(--bg-accent)' />
+                            <p className='font-body text-(--neutral) text-sm xl:text-base text-wrap text-left'>To reach Our Golden Age, In sha Allahu ta’ala, where Muslims reclaim the integrative excellence of Islam.</p>
 
                         </div>
                     </div>
