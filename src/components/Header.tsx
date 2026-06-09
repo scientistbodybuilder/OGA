@@ -1,6 +1,6 @@
 import { HashLink } from 'react-router-hash-link';
 // import { GiHamburgerMenu } from "react-icons/gi";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const Header = () => {
     const navigate = useNavigate()
@@ -13,10 +13,11 @@ const Header = () => {
             
             <nav>
                 <ul className="flex space-x-4 font-body">
-                    <li><HashLink smooth to="/#about" className="text-(--accent) hover:text-(--accent-hover) text-sm md:text-base">About</HashLink></li>
-                    <li><HashLink smooth to="/#community" className="text-(--accent) hover:text-(--accent-hover) text-sm md:text-base">Community</HashLink></li>
-                    <li><HashLink smooth to="/#news" className="text-(--accent) hover:text-(--accent-hover) text-sm md:text-base">News</HashLink></li>
-                    <li><HashLink smooth to="/#membership" className="text-(--accent) hover:text-(--accent-hover) text-sm md:text-base">Membership</HashLink></li>
+                    <li><Link to="/" className="text-(--accent) hover:text-(--accent-hover) text-sm md:text-base">Home</Link></li>
+                    <li><Link to="/programming" className="text-(--accent) hover:text-(--accent-hover) text-sm md:text-base">Programming</Link></li>
+                    <li><Link to="/gallery" className="text-(--accent) hover:text-(--accent-hover) text-sm md:text-base">Gallery</Link></li>
+                    {/* <li><HashLink smooth to="/#news" className="text-(--accent) hover:text-(--accent-hover) text-sm md:text-base">News</HashLink></li>
+                    <li><HashLink smooth to="/#membership" className="text-(--accent) hover:text-(--accent-hover) text-sm md:text-base">Membership</HashLink></li> */}
                 </ul>
             </nav>
             <a href="https://chat.whatsapp.com/EY0IqFnaRga8NAyUEFA4bD" target="_blank" className="bg-(--accent) text-white text-sm md:text-base rounded-full font-body cursor-pointer py-2 px-4 transition duration-300 hover:bg-(--accent-hover)">
