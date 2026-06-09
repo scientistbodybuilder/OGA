@@ -1,4 +1,4 @@
-import { HashLink } from 'react-router-hash-link';
+// import { HashLink } from 'react-router-hash-link';
 // import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate, Link } from 'react-router-dom'
 
