@@ -20,7 +20,7 @@ const Header = () => {
                     <li><HashLink smooth to="/#membership" className="text-(--accent) hover:text-(--accent-hover) text-sm md:text-base">Membership</HashLink></li> */}
                 </ul>
             </nav>
-            <a href="https://chat.whatsapp.com/EY0IqFnaRga8NAyUEFA4bD" target="_blank" className="bg-(--accent) text-white text-sm md:text-base rounded-full font-body cursor-pointer py-2 px-4 transition duration-300 hover:bg-(--accent-hover)">
+            <a href="https://chat.whatsapp.com/EY0IqFnaRga8NAyUEFA4bD" target="_blank" className="bg-(--accent) text-white text-xs md:text-sm rounded-full font-body cursor-pointer py-2 px-4 transition duration-300 hover:bg-(--accent-hover)">
                 Join OGA
             </a>
         </header>
