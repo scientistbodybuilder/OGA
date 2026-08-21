@@ -40,18 +40,18 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <img src='/oga-logo.png' alt="OGA Logo" className="h-12 rounded-full mr-3" />
-              <h3 className="font-heading text-2xl font-medium text-(--accent)">Our Golden Age</h3>
+              <h3 className="font-heading text-2xl font-medium text-(--accent-color)">Our Golden Age</h3>
             </div>
-            <p className="font-body text-sm mb-4 text-(--accent)">
+            <p className="font-body text-sm mb-4 text-(--accent-color)">
               Copyright © 2026 Our Golden Age.
             </p>
-            <p className='font-body text-sm text-(--accent)'>All Rights Reserved</p>
+            <p className='font-body text-sm text-(--accent-color)'>All Rights Reserved</p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h3 className="font-body text-(--neutral) text-base font-medium lg:text-lg mb-4">NAVIGATION</h3>
-            <ul className="space-y-2 text-sm text-(--accent)">
+            <ul className="space-y-2 text-sm text-(--accent-color)">
               <li>
                 <HashLink smooth to="/#about" className="font-body hover:text-(--accent-hover) transition-colors">About</HashLink>
               </li>
@@ -71,15 +71,15 @@ const Footer = () => {
             <h3 className="text-(--neutral) font-body font-medium text-base lg:text-lg mb-4">CONTACT</h3>
             
             <div className='font-inter grid grid-cols-2 gap-4 w-full'>
-              <input {...register("firstName")} type='text' name='firstName' placeholder='First Name' className='font-body border rounded-sm border-(--accent) px-3 py-1 text-(--accent) text-xs lg:text-sm placeholder:text-(--accent) focus:outline-none' />
-              <input {...register("lastName")} type='text' name='lastName' placeholder='Last Name' className='font-body border rounded-sm border-(--accent) px-3 py-1 text-(--accent) text-xs lg:text-sm placeholder:text-(--accent) focus:outline-none' />
-              <input {...register("email")} type='text' name='email' placeholder='Email' className='font-body border rounded-sm border-(--accent) px-3 py-1 text-(--accent) text-xs lg:text-sm placeholder:text-(--accent) focus:outline-none' />
-              <input {...register("phoneNumber")} type='text' name='phoneNumber' placeholder='Phone Number' className='font-body border rounded-sm border-(--accent) px-3 py-1 text-(--accent) text-xs lg:text-sm placeholder:text-(--accent) focus:outline-none' />
+              <input {...register("firstName")} type='text' name='firstName' placeholder='First Name' className='font-body border rounded-sm border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
+              <input {...register("lastName")} type='text' name='lastName' placeholder='Last Name' className='font-body border rounded-sm border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
+              <input {...register("email")} type='text' name='email' placeholder='Email' className='font-body border rounded-sm border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
+              <input {...register("phoneNumber")} type='text' name='phoneNumber' placeholder='Phone Number' className='font-body border rounded-sm border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
             </div>
 
-            <input {...register("message")} type='text' name='message' placeholder='Message' className='font-body w-full border rounded-sm border-(--accent) px-3 py-2 font-normal text-(--accent) text-xs lg:text-sm mt-4 placeholder:text-(--accent) focus:outline-none' />
+            <input {...register("message")} type='text' name='message' placeholder='Message' className='font-body w-full border rounded-sm border-(--accent-color) px-3 py-2 font-normal text-(--accent-color) text-xs lg:text-sm mt-4 placeholder:text-(--accent-color) focus:outline-none' />
 
-            <button type='submit' className='flex items-center justify-center bg-(--accent) hover:bg-(--accent-hover) text-white py-1 cursor-pointer px-4 rounded-full mt-2 transition-colors'>
+            <button type='submit' className='flex items-center justify-center bg-(--accent-color) hover:bg-(--accent-hover) text-white py-1 cursor-pointer px-4 rounded-full mt-2 transition-colors'>
               {loading ? <img src='/gray_spinner.svg' className='h-6 w-6' /> : 'Send'}
             </button>
             {/* {messageSentSuccess && <p className='text-xs md:text-sm text-(--accent)'>Message sent successfully</p>}
