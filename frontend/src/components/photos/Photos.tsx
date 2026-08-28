@@ -1,6 +1,6 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { HashLink } from "react-router-hash-link"
 
 const Photos = () => {

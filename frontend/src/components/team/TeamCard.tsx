@@ -9,8 +9,8 @@ import {
 import {
   Card,
   CardContent,
-  CardHeader,
-  CardTitle,
+//   CardHeader,
+//   CardTitle,
 } from '@/components/ui/card'
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";

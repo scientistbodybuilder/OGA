@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+// import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -9,9 +9,9 @@ import { CalendarDays, CircleDollarSign, Leaf, Scale, Sparkles, Sprout } from 'l
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
+//   DialogDescription,
+//   DialogHeader,
+//   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
 import SeminarModal from './SeminarModal'
@@ -35,14 +35,14 @@ const SeminarCard = ({
     url,
     image,
 }: SeminarCardProps) => {
-    const icons = {
-        sparkles: Sparkles,
-        scale: Scale,
-        leaf: Leaf,
-        sprout: Sprout,
-        calendar: CalendarDays,
-        finance: CircleDollarSign,
-    }
+    // const icons = {
+    //     sparkles: Sparkles,
+    //     scale: Scale,
+    //     leaf: Leaf,
+    //     sprout: Sprout,
+    //     calendar: CalendarDays,
+    //     finance: CircleDollarSign,
+    // }
     // const Icon = icon ? icons[icon] : null
 
     return (

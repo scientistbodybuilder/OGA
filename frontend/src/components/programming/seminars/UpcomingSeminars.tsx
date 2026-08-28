@@ -1,9 +1,9 @@
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
+//   DialogDescription,
+//   DialogHeader,
+//   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
 const upcomingSeminars = [
@@ -31,13 +31,13 @@ const getInstagramEmbedUrl = (postUrl: string) => {
 	return url.toString()
 }
 
-const getInstagramThumbnail = (postUrl: string) => {
-  const url = new URL(postUrl)
-  url.search = ''
-  url.pathname = `${url.pathname.replace(/\/$/, '')}/media/`
-  url.searchParams.set('size', 'l')
-  return url.toString()
-}
+// const getInstagramThumbnail = (postUrl: string) => {
+//   const url = new URL(postUrl)
+//   url.search = ''
+//   url.pathname = `${url.pathname.replace(/\/$/, '')}/media/`
+//   url.searchParams.set('size', 'l')
+//   return url.toString()
+// }
 
 const UpcomingSeminars = () => {
 	return (

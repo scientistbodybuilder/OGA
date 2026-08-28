@@ -7,21 +7,21 @@ import { fetchSeminars, normalizeQuery } from '../../../services/seminarServices
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
+//   PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination"
 
-const seminars = [
-    { date: 'OCT 15', title: 'Ethics in Artificial Intelligence', description: 'Exploring Islamic frameworks for algorithmic bias and data sovereignty in the modern age.', action: 'Register now', category: 'Technology & Ethics', icon: 'sparkles' as const },
-    { date: 'NOV 02', title: 'The Al-Andalus Project', description: 'A historical analysis of cross-cultural innovation and the blueprint for future creative ecosystems.', action: 'View details', category: 'History & Culture', icon: 'scale' as const },
-    { date: 'DEC 12', title: 'Sustainable Finance Models', description: 'Practical applications of Riba-free investing for the modern high-net-worth professional.', action: 'Notify me', category: 'Finance & Leadership', icon: 'finance' as const },
-    { date: 'JAN 18', title: 'The Art of Deep Work', description: 'Building a focused practice and meaningful rhythm for high-impact professional work.', action: 'Register now', category: 'Professional Growth', icon: 'sprout' as const },
-    { date: 'FEB 08', title: 'Faith, Science & Discovery', description: 'A thoughtful conversation about curiosity, inquiry, and the responsibility of knowledge.', action: 'View details', category: 'Science & Thought', icon: 'leaf' as const },
-    { date: 'MAR 21', title: 'Leading With Ihsan', description: 'Developing principled leadership habits for teams, communities, and the next generation.', action: 'Notify me', category: 'Leadership', icon: 'calendar' as const },
-]
+// const seminars = [
+//     { date: 'OCT 15', title: 'Ethics in Artificial Intelligence', description: 'Exploring Islamic frameworks for algorithmic bias and data sovereignty in the modern age.', action: 'Register now', category: 'Technology & Ethics', icon: 'sparkles' as const },
+//     { date: 'NOV 02', title: 'The Al-Andalus Project', description: 'A historical analysis of cross-cultural innovation and the blueprint for future creative ecosystems.', action: 'View details', category: 'History & Culture', icon: 'scale' as const },
+//     { date: 'DEC 12', title: 'Sustainable Finance Models', description: 'Practical applications of Riba-free investing for the modern high-net-worth professional.', action: 'Notify me', category: 'Finance & Leadership', icon: 'finance' as const },
+//     { date: 'JAN 18', title: 'The Art of Deep Work', description: 'Building a focused practice and meaningful rhythm for high-impact professional work.', action: 'Register now', category: 'Professional Growth', icon: 'sprout' as const },
+//     { date: 'FEB 08', title: 'Faith, Science & Discovery', description: 'A thoughtful conversation about curiosity, inquiry, and the responsibility of knowledge.', action: 'View details', category: 'Science & Thought', icon: 'leaf' as const },
+//     { date: 'MAR 21', title: 'Leading With Ihsan', description: 'Developing principled leadership habits for teams, communities, and the next generation.', action: 'Notify me', category: 'Leadership', icon: 'calendar' as const },
+// ]
 
 const SeminarGallery = () => {
     const [searchTerm, setSearchTerm] = useState('')
