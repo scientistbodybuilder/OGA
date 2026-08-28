@@ -13,7 +13,7 @@ interface PastMemberGroups {
 }
 
 const pastMemberData: Record<string, PastMemberGroups> = {
-    "2025/2026": {
+    "2024/2025": {
         global: [
             { name: "Amina Yusuf", position: "Ameer, Global President" },
             { name: "Omar Hassan", position: "Associate Ameer, Islamic Excellence" },
@@ -35,7 +35,7 @@ const pastMemberData: Record<string, PastMemberGroups> = {
             { name: "Zayd Mahmoud", position: "Director, Coordinations" },
         ],
     },
-    "2024/2025": {
+    "2023/2024": {
         global: [
             { name: "Khadija Saleh", position: "Ameer, Global President" },
             { name: "Adam Kareem", position: "Associate Ameer, Islamic Excellence" },
