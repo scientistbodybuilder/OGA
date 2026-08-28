@@ -1,7 +1,7 @@
-import { ArrowDownRight, BookOpen, Compass, Users } from "lucide-react"
+import { BookOpen, Compass, Users } from "lucide-react"
 import isparc2024 from "@/assets/images/isparc-2024.png"
 import isparc2026 from "@/assets/images/isparc-2026.png"
-import { HashLink } from "react-router-hash-link"
+// import { HashLink } from "react-router-hash-link"
 
 const Isparc = () => {
     return (
