@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { CalendarDays, CircleDollarSign, Leaf, Scale, Sparkles, Sprout } from 'lucide-react'
+// import { CalendarDays, CircleDollarSign, Leaf, Scale, Sparkles, Sprout } from 'lucide-react'
 import {
   Dialog,
   DialogContent,
