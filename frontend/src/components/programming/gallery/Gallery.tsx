@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import AlbumCard from "./gallery/AlbumCard";
+import AlbumCard from "./AlbumCard";
 import {
     Pagination,
     PaginationContent,

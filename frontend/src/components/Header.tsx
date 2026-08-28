@@ -33,6 +33,9 @@ const Header = () => {
                                     render={<HashLink smooth to="/programming#programs">Programs</HashLink>} >
                                 </DropdownMenuItem>
                                 <DropdownMenuItem className="cursor-pointer text-(--accent-color)"
+                                    render={<HashLink smooth to="/programming#isparc">ISPARC</HashLink>} >
+                                </DropdownMenuItem>
+                                <DropdownMenuItem className="cursor-pointer text-(--accent-color)"
                                     render={<HashLink smooth to="/programming#seminar-library">Seminar Library</HashLink>} >
                                 </DropdownMenuItem>
                                 <DropdownMenuItem className="cursor-pointer text-(--accent-color)"
