@@ -73,13 +73,13 @@ const SeminarGallery = () => {
                                 setPage(1);
                             }
                         }}
-                        className="h-8 w-full border rounded-xl border-[#e5ddd7] bg-[#fffaf7] pl-9 pr-3 font-body text-[10px] outline-none placeholder:text-[#b9aaa0] focus:border-(--accent-color)" />
+                        className="h-8 w-full border border-[#e5ddd7] bg-[#fffaf7] pl-9 pr-3 font-body text-[10px] outline-none placeholder:text-[#b9aaa0] focus:border-(--accent-color)" />
                 </label>
                 <div className="flex gap-2 self-end sm:self-auto">
-                    <Button variant="outline" onClick={() => setSortAscending((current) => !current)} className="h-8 rounded-md cursor-pointer border-[#e5ddd7] bg-transparent px-3 font-body text-[10px] font-normal uppercase text-(--accent-color) hover:bg-[#f3ede7]">
+                    <Button variant="outline" onClick={() => setSortAscending((current) => !current)} className="h-8 rounded-none! cursor-pointer border-[#e5ddd7] bg-transparent px-3 font-body text-[10px] font-normal uppercase text-(--accent-color) hover:bg-[#f3ede7]">
                         <SlidersHorizontal className="h-3 w-3" /> Filter
                     </Button>
-                    <Button variant="outline" onClick={() => setSortAscending((current) => !current)} className="h-8 rounded-md cursor-pointer border-[#e5ddd7] bg-transparent px-3 font-body text-[10px] font-normal uppercase text-(--accent-color) hover:bg-[#f3ede7]">
+                    <Button variant="outline" onClick={() => setSortAscending((current) => !current)} className="h-8 rounded-none! cursor-pointer border-[#e5ddd7] bg-transparent px-3 font-body text-[10px] font-normal uppercase text-(--accent-color) hover:bg-[#f3ede7]">
                         <ArrowDownUp className="h-3 w-3" /> Sort
                     </Button>
                 </div>
