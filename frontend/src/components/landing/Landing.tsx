@@ -1,0 +1,247 @@
+import UpcomingEvents from './UpcomingEvents';
+import ActionSection from './ActionSection';
+import Partners from './Partners';
+import Support from './Support'
+import Impact from './Impact';
+import About from './About';
+import History from './History'
+
+const LandingPage = () => {
+
+
+    return (
+        <section className='w-full space-y-16 h-full min-h-screen flex flex-col overflow-y-auto bg-(--background-color) pt-20 pb-10 px-4 sm:px-8 lg:px-10 items-center justify-start'>
+           
+            {/* <div id='home' className='w-full lg:w-11/12 h-auto flex items-center justify-center mt-16 py-12 px-4 xl:px-16'>
+                <div className='w-full h-full grid lg:grid-cols-2 gap-12 place-items-center'>
+                    <div className='w-full h-full flex flex-col items-start justify-center gap-4 p-4'>
+                        <h3 className='font-heading font-medium text-black text-4xl sm:text-5xl mb-2 sm:mb-0 md:text-4xl lg:text-5xl 2xl:text-7xl text-left max-h-[200px] md:max-h-[300px]  xl:max-h-full'>Awaken The Excellence Within. Forge the Future</h3>
+
+                        <h4 className='font-body xs:text-xs sm:text-base md:text-lg text-left text-(--accent-color)'> Our Golden Age is a sanctuary for high-achieving professionals seeking to harmonize their pursuit of modern excellence with the profound intellectual heritage of the Islamic tradition. Connect, grow, and lead. </h4>
+
+                        <div className="flex items-center gap-4">
+                            <HashLink smooth to="/#membership" className="bg-(--accent-color) text-white font-body cursor-pointer py-2 px-4 transition duration-300 hover:bg-opacity-80">
+                                Become a Member
+                            </HashLink>
+
+                            <HashLink smooth to="/#about" className="border border-color-(--accent-color) text-(--accent-color) font-body cursor-pointer py-2 px-4 transition duration-300">
+                                Read the Constitution
+                            </HashLink>
+                        </div>
+
+                    </div>
+
+                    <div className='w-full h-full flex flex-col items-center justify-center gap-3 mr-6'>
+                        <div className='w-auto h-96 lg:h-[450px] xl:h-[550px] flex items-center justify-center'>
+                            <img className='h-full w-fit object-contain rounded-full' src={landingPhotos[landingIndex]} alt="landing" />
+                        </div>
+
+
+                        <div className='flex w-full items-center justify-center gap-4'>
+                            {landingPhotos.map((_, index) => (
+                                <div className={`rounded-full h-3 w-3 ${index == landingIndex ? 'bg-(--accent-color)' : 'bg-(--accent-hover)'}`}
+                                    key={index}>
+                                </div>
+                           ))}
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div> */}
+
+            <ActionSection />
+
+            <About />
+
+            <History />
+
+            <Impact />
+
+            {/* <div id='about' className='w-full flex items-center justify-center bg-(--background-dark) h-auto px-4 xl:px-16 py-12'>
+                <div className='w-full lg:w-11/12 flex flex-col items-center justify-center gap-6'>
+                    <div className='grid md:grid-cols-[400px_1fr] w-full gap-6'>
+                        <div className='h-auto flex flex-col items-start justify-center gap-2'>
+                            <h4 className='text-base xl:text-lg font-medium text-(--neutral) tracking-widest font-body'>ABOUT US</h4>
+                            <h3 className='text-black font-medium text-5xl xl:text-6xl font-heading'>Who We Are</h3>
+                        </div>
+
+                        <div className='h-auto md:mt-12'>
+                            <p className='text-(--accent-color) text-sm xl:text-base text-wrap text-left font-body'>Our Golden Age (OGA for short) is a Fi-ridha-tillah (for the Pleasure of Allah) organization aiming to provide Islamic, intellectual, and professional development opportunities for students and seekers to become our next generation of Islamic scholars, scientists, and specialists across fields and disciplines!
+
+Inspired from the Qur’an and Sunnah, OGA seeks to inspire all Muslims to reclaim the integrative excellence of Islam through Ihsaani empowerment, Intellectual enrichment, and Industry/Professional engagement to reach Our Golden Age, In sha Allahu ta’ala!
+
+In sha Allahu ta’ala, with Allah’s Permission, together: we can SPARC Our Golden Age to reach Allah’s Pleasure and Perfection, forever!</p>
+                        </div>
+                    </div>
+
+                    <div id='about_elements' className='grid md:grid-cols-3 w-full gap-10'>
+                        <div className='relative flex flex-col items-start justify-start gap-6 bg-(--background-color) p-5 box-border rounded-md border border-[#ccc] hover:border-(--accent-color) duration-300'>
+                            <h3 className='font-heading text-black font-medium text-lg xl:text-2xl'>Our Location</h3>
+                            <GrMapLocation className='font-body h-10 w-10 absolute top-4 right-4 text-(--bg-accent-color)' />
+                            <p className='font-body text-(--neutral) text-sm xl:text-base text-wrap text-left'>Although centralized in Canada, OGA operates as an organization globally.</p>
+
+                        </div>
+
+                         <div className='relative flex flex-col items-start justify-start gap-6 bg-(--background-color) p-5 box-border rounded-md border border-[#ccc] hover:border-(--accent-color) duration-300'>
+                            <h3 className='font-heading text-black font-medium text-lg xl:text-2xl'>Our Mission</h3>
+                            <TbTargetArrow className='h-10 w-10 absolute top-4 right-4 text-(--bg-accent-color)' />
+                            <p className='font-body text-(--neutral) text-sm xl:text-base text-wrap text-left'>To seek Our Golden Age by supporting the next generation of Islamic scholars, scientists, and specialists across fields and disciplines.</p>
+
+                        </div>
+
+                         <div className='relative flex flex-col items-start justify-center gap-6 bg-(--background-color) p-5 box-border rounded-md border border-[#ccc] hover:border-(--accent-color) duration-300'>
+                            <h3 className='font-heading text-black font-medium text-lg xl:text-2xl'>Our Vision</h3>
+                            <FaHandsPraying className='h-10 w-10 absolute top-4 right-4 text-(--bg-accent-color)' />
+                            <p className='font-body text-(--neutral) text-sm xl:text-base text-wrap text-left'>To reach Our Golden Age, In sha Allahu ta’ala, where Muslims reclaim the integrative excellence of Islam.</p>
+
+                        </div>
+                    </div>
+
+                    <a href="http://bit.ly/oga-constitution" target="_blank" className="bg-(--accent-color) mt-4 text-white text-sm md:text-base rounded-full font-body cursor-pointer py-2 px-4 transition duration-300 hover:bg-(--accent-hover)">
+                        Our Constitution
+                    </a>
+
+
+                </div>
+            </div> */}
+
+            {/* <div id='community' className='w-full flex flex-col items-center justify-center bg-(--background-color) h-auto px-4 xl:px-16 gap-6 py-12'>
+                <div className='font-body w-full lg:w-11/12 flex flex-col items-center justify-center gap-2'>
+                    <h3 className='font-body text-lg md:text-xl text-(--neutral) font-medium tracking-widest '>COMMUNITY</h3>
+                    <p className='font-body text-(--accent) text-sm md:text-base mb-8'>The OGA community strives to provide all the following for our fellow Muslims</p>
+
+                    <div id='feature_elements' className='grid md:grid-cols-3 w-full gap-6 xl:gap-12'>
+                        
+                        <div className='font-body bg-(--background-dark) rounded-xl shadow-md px-8 pt-4 pb-8 flex flex-col items-center justify-start hover:translate-y-[-20px] transition-transform hover:shadow-lg'>
+                            <div className='font-body flex items-center justify-center h-12 w-12 rounded-lg mb-3 bg-green-200'>
+                                <IoChatbubblesOutline className='font-body h-8 w-8 text-green-600' />
+                            </div>
+
+                            <h3 className='font-body font-semibold text-xl lg:text-xl xl:text-2xl text-center'>Group Chats for 20+ Professions</h3>
+
+                            <p className='font-body font-medium text-(--accent-color) text-wrap text-center text-base xl:text-lg'>
+                                OGA provides and monitors 20+ active group chats for a variety of professionals, inclduing Computer Science, Medicine, and Acadamia
+                            </p>
+
+                        </div>
+
+                        <div className='font-body bg-(--background-dark) rounded-xl shadow-md px-8 py-4 flex flex-col items-center justify-start hover:translate-y-[-20px] transition-transform hover:shadow-lg'>
+                            <div className='font-body flex items-center justify-center h-12 w-12 rounded-lg mb-3 bg-yellow-100'>
+                                <GoPeople className='font-body h-8 w-8 text-yellow-600' />
+                            </div>
+
+                            <h3 className='font-body font-semibold text-lg lg:text-xl xl:text-2xl text-center'>ISPARC</h3>
+
+                            <p className='font-body font-medium text-(--accent-color) text-wrap text-center text-base xl:text-lg'>
+                                The 'Islamic Symposium of Professionals in Academia, Research and across Careers', is an event hosted by OGA to bring together scholars and professionals from various fields.
+                            </p>
+
+                        </div>
+
+                        <div className='font-body bg-(--background-dark) rounded-xl shadow-md px-8 py-4 flex flex-col items-center justify-start hover:translate-y-[-20px] transition-transform hover:shadow-lg'>
+                            <div className='font-body flex items-center justify-center h-12 w-12 rounded-lg mb-3 bg-red-200'>
+                                <FaRegNewspaper className='font-body h-8 w-8 text-red-600' />
+                            </div>
+
+                            <h3 className='font-body font-semibold text-lg lg:text-xl xl:text-2xl text-center'>OGA Newsletter</h3>
+
+                            <p className='font-body font-medium text-(--accent-color) text-wrap text-center text-base xl:text-lg'>
+                                A free newsletter keeping you updated on the latest news and events from OGA, and other professional opportunities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> */}
+
+            <UpcomingEvents />
+
+            <Support />
+
+            {/* <div id='membership' className='font-body w-full flex flex-col items-center justify-center h-auto px-4 xl:px-16 py-12'>
+                    <div className='font-body w-full lg:w-11/12 flex flex-col items-center justify-center gap-2'>
+                                <h3 className='font-body text-lg md:text-xl font-medium tracking-widest text-(--neutral)'>SUPPORT US</h3>
+                                <p className='font-body  text-sm text-(--accent-color) lg:text-base text-center'>Alhamdulillah, there are many ways you can support OGA including</p>
+
+                                <div className='grid md:grid-cols-3 w-full gap-10 mt-8'>
+                                    <div className='relative flex flex-col items-start justify-start gap-2 bg-(--background-color) p-5 box-border rounded-md border border-[#ccc] hover:border-(--accent-color) duration-300'>
+                                        <div className='w-full flex items-end justify-between mb-2'>
+                                            <h3 className='font-heading text-black font-medium text-lg xl:text-2xl m-0'>Become a Member</h3>
+                                            <BiDonateHeart className='font-body h-16 w-16 text-(--bg-accent-color)' />
+                                        </div>
+                                        
+                                        <p className='font-body text-(--neutral) text-xs lg:text-sm text-wrap text-left'>By joining our Membership ($10/year) OR donating any amount to support our community’s ongoing Programming through this link/our email below!</p>
+                                    </div>
+
+                                    <div className='relative flex flex-col items-start justify-start gap-2 bg-(--background-color) p-5 box-border rounded-md border border-[#ccc] hover:border-(--accent-color) duration-300'>
+                                        <div className='w-full flex items-end justify-between mb-2'>
+                                            <h3 className='font-heading text-black font-medium text-lg xl:text-2xl m-0'>Engage Socials</h3>
+                                            <IoShareSocialOutline className='font-body h-16 w-16 text-(--bg-accent-color)' />
+                                        </div>
+                                        
+                                        <p className='font-body text-(--neutral) text-xs lg:text-sm text-wrap text-left'>By following, engaging and sharing our socials and posts across your feed on Facebook, Instagram, LinkedIn and WhatsApp via our Linktr.ee here!</p>
+                                    </div>
+
+                                    <div className='relative flex flex-col items-start justify-start gap-2 bg-(--background-color) p-5 box-border rounded-md border border-[#ccc] hover:border-(--accent-color) duration-300'>
+                                        <div className='w-full flex items-end justify-between mb-2'>
+                                            <h3 className='font-heading text-black font-medium text-lg xl:text-2xl m-0'>Join a Chapter</h3>
+                                            <PiHandsPraying className='font-body h-16 w-16 text-(--bg-accent-color)' />
+                                        </div>
+                                        
+                                        <p className='font-body text-(--neutral) text-xs lg:text-sm text-wrap text-left'>By starting or joining an OGA Chapter in your Community to amplify OGA’s Vision through ongoing programming in your locality through the link here!</p>
+                                    </div>
+                            </div>
+
+                            <button className="bg-(--accent) mt-4 text-white text-sm md:text-base rounded-full font-body cursor-pointer py-2 px-4 transition duration-300 hover:bg-(--accent-hover)">
+                                Become a Member
+                            </button>
+                    </div>
+            </div> */}
+
+            {/* <div id='partners' className='font-body w-full flex flex-col items-center justify-center bg-(--background-color) h-auto px-4 xl:px-16 py-12'>
+                <div className='font-body w-full lg:w-11/12 flex flex-col items-center justify-center'>
+                                <h3 className='font-body text-lg md:text-xl font-medium tracking-widest text-(--neutral)'>OUR PARTNERS</h3>
+                                <p className='font-body  text-sm text-(--accent-color) lg:text-base text-center'>See below a list of our trusted partners.</p>
+
+                                <div className='font-body w-full h-auto flex flex-col md:flex-row items-center justify-evenly gap-4 mt-8 flex-wrap'>
+                                    {partners.map((partner, index) => (
+                                        <div key={index} className='font-body w-20 lg:w-24 h-auto flex items-center justify-center'>
+                                            <img className='font-body h-full object-contain rounded-full' src={partner} alt={`Partner ${index + 1}`} />
+                                        </div>
+                                    ))}
+                                </div>
+                </div>
+
+            </div> */}
+            <Partners />
+
+            {/* <div id='contact' className='font-body w-full flex flex-col items-center justify-center bg-white h-auto px-4 xl:px-16 pt-12'>
+                <div className='font-body w-full lg:w-11/12 xl:w-10/12 grid md:grid-cols-2 gap-8'>
+                    <div className='font-body flex flex-col items-start justify-center gap-4'>
+                        <h3 className='font-body text-lg md:text-xl font-semibold tracking-widest'>Join OGA Today</h3>
+                        <h3 className='font-body text-[var(--secondary-color)] font-bold text-3xl xl:text-4xl 2xl:text-5xl'>ACCESS CO-LAB ANYWHERE</h3>
+
+                        <div className='font-body w-auto flex items-center justify-center gap-4 mt-4'>
+                            <a target='_blank' href="https://play.google.com/store/apps/details?id=acubbed.colab.app">
+                                
+                            </a>
+
+                            <a target='_blank' href="https://apps.apple.com/us/app/co-lab-health/id6747808897">
+                                
+                            </a>
+                        </div>  
+                    </div>
+
+                    <div className='font-body flex items-center justify-center h-96 w-auto'>
+                        <img className='font-body h-full object-contain' src={subscribe_bro} alt="Subscribe" />
+                    </div>
+                                    
+                </div>
+            </div> */}
+
+        </section>
+    )
+}
+
+export default LandingPage

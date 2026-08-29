@@ -71,13 +71,13 @@ const Footer = () => {
             <h3 className="text-(--neutral) font-body font-medium text-base lg:text-lg mb-4">CONTACT</h3>
             
             <div className='font-inter grid grid-cols-2 gap-4 w-full'>
-              <input {...register("firstName")} type='text' name='firstName' placeholder='First Name' className='font-body border rounded-sm border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
-              <input {...register("lastName")} type='text' name='lastName' placeholder='Last Name' className='font-body border rounded-sm border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
-              <input {...register("email")} type='text' name='email' placeholder='Email' className='font-body border rounded-sm border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
-              <input {...register("phoneNumber")} type='text' name='phoneNumber' placeholder='Phone Number' className='font-body border rounded-sm border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
+              <input {...register("firstName")} type='text' name='firstName' placeholder='First Name' className='font-body border border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
+              <input {...register("lastName")} type='text' name='lastName' placeholder='Last Name' className='font-body border border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
+              <input {...register("email")} type='text' name='email' placeholder='Email' className='font-body border border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
+              <input {...register("phoneNumber")} type='text' name='phoneNumber' placeholder='Phone Number' className='font-body border border-(--accent-color) px-3 py-1 text-(--accent-color) text-xs lg:text-sm placeholder:text-(--accent-color) focus:outline-none' />
             </div>
 
-            <input {...register("message")} type='text' name='message' placeholder='Message' className='font-body w-full border rounded-sm border-(--accent-color) px-3 py-2 font-normal text-(--accent-color) text-xs lg:text-sm mt-4 placeholder:text-(--accent-color) focus:outline-none' />
+            <input {...register("message")} type='text' name='message' placeholder='Message' className='font-body w-full border border-(--accent-color) px-3 py-2 font-normal text-(--accent-color) text-xs lg:text-sm mt-4 placeholder:text-(--accent-color) focus:outline-none' />
 
             <button type='submit' className='flex items-center justify-center bg-(--accent-color) hover:bg-(--accent-hover) text-white py-1 cursor-pointer px-4 rounded-full mt-2 transition-colors'>
               {loading ? <img src='/gray_spinner.svg' className='h-6 w-6' /> : 'Send'}
@@ -96,19 +96,19 @@ const Footer = () => {
                 <div className="font-body w-full border-t-2 border-(--accent-color)"></div>
                 <div className="font-body flex items-center justify-center w-auto">
                     <ul className="font-body flex justify-center items-center space-x-6 text-sm">
-                        <li className="font-body p-2 rounded-full bg-(--accent-color) flex items-center justify-center">
+                        <li className="font-body p-2 cursor-pointer transition-transform duration-300 hover:-translate-y-1 rounded-full bg-(--accent-color) flex items-center justify-center">
                         <Link to={'https://www.instagram.com/our_golden_age'}><RiInstagramFill className="font-body inline-block h-5 w-5 text-white" /></Link>
                         </li>
-                        <li className="font-body p-2 rounded-full bg-(--accent-color) flex items-center justify-center">
+                        <li className="font-body p-2 cursor-pointer transition-transform duration-300 hover:-translate-y-1 rounded-full bg-(--accent-color) flex items-center justify-center">
                         <Link to={'https://www.facebook.com/OurGoldenAge123'}><FaFacebookSquare className="font-body inline-block h-5 w-5 text-white" /></Link>
                         </li>
-                        <li className="font-body p-2 rounded-full bg-(--accent-color) flex items-center justify-center">
+                        <li className="font-body p-2 cursor-pointer transition-transform duration-300 hover:-translate-y-1 rounded-full bg-(--accent-color) flex items-center justify-center">
                         <Link to={'https://www.youtube.com/@OurGoldenAge1'}><FaYoutube className="font-body inline-block h-5 w-5 text-white" /></Link>
                         </li>
-                        <li className="font-body p-2 rounded-full bg-(--accent-color) flex items-center justify-center">
+                        <li className="font-body p-2 cursor-pointer transition-transform duration-300 hover:-translate-y-1 rounded-full bg-(--accent-color) flex items-center justify-center">
                         <Link to={'https://www.linkedin.com/company/our-golden-age/'}><FaLinkedin className="font-body inline-block h-5 w-5 text-white" /></Link>
                         </li>
-                        <li className="font-body p-2 rounded-full bg-(--accent-color) flex items-center justify-center">
+                        <li className="font-body p-2 cursor-pointer transition-transform duration-300 hover:-translate-y-1 rounded-full bg-(--accent-color) flex items-center justify-center">
                         <Link to={'https://chat.whatsapp.com/EY0IqFnaRga8NAyUEFA4bD'}><FaWhatsapp className="font-body inline-block h-5 w-5 text-white" /></Link>
                         </li>
                     </ul>
