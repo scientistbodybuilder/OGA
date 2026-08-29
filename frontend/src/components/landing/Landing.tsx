@@ -1,31 +1,3 @@
-import { useState, useEffect } from 'react'
-// import { useNavigate } from 'react-router-dom'
-
-
-import landingPhoto from '../../assets/images/landing_img.png'
-import landingPhoto2 from '../../assets/images/landing_img_2.png'
-//about icons
-import { GrMapLocation } from "react-icons/gr";
-import { TbTargetArrow } from "react-icons/tb";
-import { FaHandsPraying } from "react-icons/fa6";
-
-
-//community icons
-import { IoChatbubblesOutline } from "react-icons/io5";
-import { GoPeople } from "react-icons/go";
-import { FaRegNewspaper } from "react-icons/fa6";
-
-//news images
-import isparc_2024 from '../../assets/images/isparc-2024.png'
-import isparc_2026 from '../../assets/images/isparc-2026.png'
-
-//membership images
-import { BiDonateHeart } from "react-icons/bi";
-import { IoShareSocialOutline } from "react-icons/io5";
-import { PiHandsPraying } from "react-icons/pi";
-//partner images
-import msa_logo from '../../assets/images/msa-logo.png'
-import { HashLink } from 'react-router-hash-link';
 import UpcomingEvents from './UpcomingEvents';
 import ActionSection from './ActionSection';
 import Partners from './Partners';
@@ -34,52 +6,10 @@ import Impact from './Impact';
 import About from './About';
 import History from './History'
 
-const partners = [
-        msa_logo
-    ]
 
-const landingPhotos = [
-    landingPhoto,
-    landingPhoto2
-]
-
-const news = [
-        {
-            image:isparc_2024,
-            hook: "ISPARC 2024",
-            body:"🌍 A Week of Impact and Innovation for CO-LAB! 🚀\n\nLast week, we had the incredible opportunity to participate in the Africa HealthTech Summit - #AHTS25, where we explored the evolving health tech landscape across the continent — diving deep into the opportunities, challenges, and future potential of digital health in Africa. 💡\n\nWe also joined the Inspire Africa Conference, focusing on product development and refinement, and pitched our solution at the Annual Health Convening organized by the Africa Health Collaborative. 🎤\n\nA huge thank you to the African Impact Initiative for making these transformative experiences possible. Your support continues to empower startups like ours to build a healthier, more connected Africa. 💙"
-        },
-        {
-            image:isparc_2026,
-            hook: "ISPARC 2026 Coming Soon!",
-            body:"We’re excited to be part of the Africa Impact Initiative Bootcamp, joining 11 innovative health tech startups in the Africa Impact Challenge Program, proudly organized by the University of Toronto, Canada.\n\nThis milestone is not just a recognition of our efforts, but also an incredible opportunity to gain knowledge, mentorship, and collaboration with some of the brightest innovators across Africa.\n\nBeing part of this prestigious program strengthens our commitment to building impactful solutions that address critical challenges in healthcare and improve lives across the continent."
-        },
-        // {
-        //     image:acubed_regional_finalist,
-        //     hook: "ACUBED has been selected as a Regional Finalist for East Africa in the prestigious Global Startup Awards Africa, competing in two major categories: Best Newcomer and Health Tech Startup of the Year.",
-        //     body:"ACUBED has been selected as a Regional Finalist for East Africa in the prestigious Global Startup Awards Africa, competing in two major categories: Best Newcomer and Health Tech Startup of the Year. This recognition highlights our innovative work in transforming diagnostic access through technology, community-centered design, and last-mile healthcare logistics. Being chosen among top startups across the continent is a powerful validation of our mission to make diagnostic services accessible, reliable, and affordable for underserved populations. We are honored by this achievement and remain committed to scaling our impact across Africa."
-        // },
-        // {
-        //     image: africa_tech_festival,
-        //     hook: "Last week, ACUBED had the exciting opportunity to participate in the Africa Tech Festival in Cape Town, where we showcased our digital diagnostics platform CO-LAB and engaged with leaders shaping the future of Africa’s tech ecosystem.",
-        //     body: "ACUBED at Africa Tech Festival 2025 – Cape Town Highlights 🚀\n\nLast week, ACUBED had the exciting opportunity to participate in the Africa Tech Festival in Cape Town, where we showcased our digital diagnostics platform CO-LAB and engaged with leaders shaping the future of Africa’s tech ecosystem.\n\nThroughout the event, we connected with investors, innovators, and industry experts across the continent — exploring new perspectives and collaboration opportunities to strengthen digital health infrastructure in Africa. 🤝✨\n\nWe also took part in the African Impact Initiative Alumni Event, where we shared more about ACUBED’s mission: democratizing access to diagnostics and improving health outcomes through technology and smart logistics.\n\nThis experience reaffirmed the importance of innovation, strategic partnerships, and community in driving impactful health solutions across Africa. 🌱💡\n\nA huge thank you to the African Impact Initiative for their continued support and for making this journey possible. 🙌\n\nWe’re energized, inspired, and ready for what’s next! 🚀💉📲\n\nStay tuned — the best is yet to come."
-        // }
-    ]
 
 const LandingPage = () => {
-    // const navigate = useNavigate()
 
-    const [landingIndex, setLandingIndex] = useState(0)
-
-    useEffect(() => {
-        setTimeout(() => {
-            if (landingIndex == landingPhotos.length - 1) {
-                setLandingIndex(0);
-            } else {
-                setLandingIndex(landingIndex + 1);
-            }
-        }, 5000);
-    },[landingIndex]);
 
     return (
         <section className='w-full space-y-16 h-full min-h-screen flex flex-col overflow-y-auto bg-(--background-color) pt-20 pb-10 px-4 sm:px-8 lg:px-10 items-center justify-start'>

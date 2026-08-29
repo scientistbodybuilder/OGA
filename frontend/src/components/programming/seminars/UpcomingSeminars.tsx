@@ -1,11 +1,4 @@
-import {
-  Dialog,
-  DialogContent,
-//   DialogDescription,
-//   DialogHeader,
-//   DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+
 import InstagramCard from '../InstagramCard'
 const upcomingSeminars = [
 	'https://www.instagram.com/p/DaTEveugOB9/',
@@ -24,13 +17,6 @@ const upcomingSeminars = [
 	'https://www.instagram.com/p/DInOJvasFk3/',
 	'https://www.instagram.com/p/DIkrv1WMQ2g/'
 ]
-
-const getInstagramEmbedUrl = (postUrl: string) => {
-	const url = new URL(postUrl)
-	url.search = ''
-	url.pathname = `${url.pathname.replace(/\/$/, '')}/embed`
-	return url.toString()
-}
 
 // const getInstagramThumbnail = (postUrl: string) => {
 //   const url = new URL(postUrl)

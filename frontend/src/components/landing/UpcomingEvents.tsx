@@ -7,12 +7,6 @@ const upcomingEvents = [
 	'https://www.instagram.com/p/DZNd0cTldPf/?img_index=1',
 ]
 
-const getInstagramEmbedUrl = (postUrl: string) => {
-	const url = new URL(postUrl)
-	url.search = ''
-	url.pathname = `${url.pathname.replace(/\/$/, '')}/embed`
-	return url.toString()
-}
 
 const UpcomingEvents = () => {
 

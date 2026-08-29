@@ -1,12 +1,12 @@
 
 
-const markers = [
-    {
-        title:"Scarborough",
-        subHeading:"Scarborough, Ontario, Canada",
-        coordinates: [] //lat lon
-    }
-]
+// const markers = [
+//     {
+//         title:"Scarborough",
+//         subHeading:"Scarborough, Ontario, Canada",
+//         coordinates: [] //lat lon
+//     }
+// ]
 
 const Impact = () => {
     return (
@@ -17,7 +17,7 @@ const Impact = () => {
                 <h4 className="mt-4 max-w-[330px] text-center font-body text-sm leading-[1.4] text-[#5f554f]">OGA's impact around the world.</h4>
             </div>
 
-            
+
         </section>
     )
 }
