@@ -14,9 +14,9 @@ const Header = () => {
     const navigate = useNavigate()
     return(
         <header className="bg-(--background-color) h-14 py-2 px-6 shadow-md w-full flex items-center justify-between fixed z-50">
-            <div className="flex items-center gap-3">
-                <img src='/oga-logo.png' alt="OGA Logo" className="h-10 w-10 rounded-full cursor-pointer" onClick={()=> navigate('/')} />
-                <a className="text-xl font-heading text-(--accent-color) hidden md:block" href="/">Our Golden Age</a>
+            <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
+                <img src='/oga-logo.png' alt="OGA Logo" className="h-10 w-10 rounded-full cursor-pointer" />
+                <h3 className="text-xl font-heading text-(--accent-color) hidden md:block">Our Golden Age</h3>
             </div>
             
             <nav>
