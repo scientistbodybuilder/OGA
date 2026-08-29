@@ -6,8 +6,6 @@ import Impact from './Impact';
 import About from './About';
 import History from './History'
 
-
-
 const LandingPage = () => {
 
 
