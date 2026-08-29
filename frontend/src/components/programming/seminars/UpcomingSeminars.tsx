@@ -6,6 +6,7 @@ import {
 //   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import InstagramCard from '../InstagramCard'
 const upcomingSeminars = [
 	'https://www.instagram.com/p/DaTEveugOB9/',
 	'https://www.instagram.com/p/DV9fEHNjmDM/',
@@ -55,37 +56,7 @@ const UpcomingSeminars = () => {
 						key={postUrl}
 						className={`relative min-h-0 overflow-hidden rounded-lg bg-white shadow-[0_8px_24px_rgba(96,68,24,0.08)] ${index % 5 === 0 ? 'sm:col-span-2 sm:row-span-2' : ''}`}
 					>
-						<Dialog>
-							<DialogTrigger className="cursor-pointer">
-								{/* <div className="relative h-full w-full cursor-pointer"> */}
-									<iframe
-									title={`Instagram post ${index + 1}`}
-									src={getInstagramEmbedUrl(postUrl)}
-									className="pointer-events-none absolute inset-0 h-full w-full border-0"
-									loading="lazy"
-									// tabIndex={-1}
-									/>
-									{/* Transparent overlay — this is what actually receives the click */}
-									<div className="absolute inset-0" />
-								{/* </div> */}
-								
-							</DialogTrigger>
-							<DialogContent className=" w-full h-full sm:w-[500px] sm:h-[650px] lg:w-[700px] lg:h-[800px] !max-w-none">
-								{/* <DialogHeader>
-									<DialogTitle>Instagram Post</DialogTitle>
-									<DialogDescription>
-										Preview of the Instagram post.
-									</DialogDescription>
-								</DialogHeader> */}
-								<iframe
-									title={`Instagram post ${index + 1}`}
-									src={getInstagramEmbedUrl(postUrl)}
-									className="h-full w-full border-0"
-									loading="lazy"
-									allowFullScreen
-								/>
-							</DialogContent>
-						</Dialog>
+						<InstagramCard url={postUrl} />
 					</article>
 				))}
 			</div>

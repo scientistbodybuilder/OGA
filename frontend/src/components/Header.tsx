@@ -1,14 +1,31 @@
-// import { HashLink } from 'react-router-hash-link';
-// import { GiHamburgerMenu } from "react-icons/gi";
-import { useNavigate, Link } from 'react-router-dom'
-import { HashLink } from 'react-router-hash-link';
-import { ChevronDown } from 'lucide-react'
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
+import { useNavigate } from 'react-router-dom'
+import type { NavigationMenuComponentProps } from './NavigationMenu'
+import MobileNavigation from './MobileNavigation'
+import NavigationMenuComponent from './NavigationMenu'
+
+const navigationMenuProps: NavigationMenuComponentProps = {
+    componentMap: {
+        "Home": [
+            { title: "About", href: "/#about" },
+            { title: "History", href: "/#history" },
+            { title: "Impact", href: "/#impact" },
+            { title: "Upcoming Events", href: "/#upcoming-events" },
+            { title: "Partners", href: "/#partners" }
+        ],
+        "Programming": [
+            { title: "Programs", href: "/programming#programs" },
+            { title: "ISPARC", href: "/programming#isparc" },
+            { title: "Seminar Library", href: "/programming#seminar-library" },
+            { title: "Upcoming Seminars", href: "/programming#upcoming-seminars" },
+            { title: "Gallery", href: "/programming#gallery" }
+        ],
+        "Team": [
+            { title: "Organizational Structure", href: "/team#organizational-structure" },
+            { title: "Present Team", href: "/team#present-team" },
+            { title: "Past Members", href: "/team#past-members" }
+        ]
+    }
+}
 
 const Header = () => {
     const navigate = useNavigate()
@@ -19,58 +36,11 @@ const Header = () => {
                 <h3 className="text-xl font-heading text-(--accent-color) hidden md:block">Our Golden Age</h3>
             </div>
             
-            <nav>
-                <ul className="flex space-x-4 font-body">
-                    <li><Link to="/" className="text-(--accent-color) hover:text-(--accent-hover) text-sm md:text-base">Home</Link></li>
-                    <li>
-                        <DropdownMenu>
-                            <DropdownMenuTrigger className="flex items-center gap-1 font-body text-sm text-(--accent-color) outline-none hover:text-(--accent-hover) md:text-base">
-                                Programming
-                                <ChevronDown aria-hidden="true" className="h-3.5 w-3.5" />
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent align="end" className="min-w-44 rounded-none border border-[#e5ddd7] bg-(--background-color) font-body">
-                                <DropdownMenuItem className="cursor-pointer text-(--accent-color)"
-                                    render={<HashLink smooth to="/programming#programs">Programs</HashLink>} >
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className="cursor-pointer text-(--accent-color)"
-                                    render={<HashLink smooth to="/programming#isparc">ISPARC</HashLink>} >
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className="cursor-pointer text-(--accent-color)"
-                                    render={<HashLink smooth to="/programming#seminar-library">Seminar Library</HashLink>} >
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className="cursor-pointer text-(--accent-color)"
-                                    render={<HashLink smooth to="/programming#upcoming-seminars">Upcoming Seminars</HashLink>} >
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className="cursor-pointer text-(--accent-color)"
-                                    render={<HashLink smooth to="/programming#gallery">Gallery</HashLink>} >
-                                </DropdownMenuItem>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
-                    </li>
-                    <li>
-                        <DropdownMenu>
-                            <DropdownMenuTrigger className="flex items-center gap-1 font-body text-sm text-(--accent-color) outline-none hover:text-(--accent-hover) md:text-base">
-                                Team
-                                <ChevronDown aria-hidden="true" className="h-3.5 w-3.5" />
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent align="end" className="min-w-44 rounded-none border border-[#e5ddd7] bg-(--background-color) font-body">
-                                <DropdownMenuItem className="cursor-pointer text-(--accent-color)"
-                                    render={<HashLink smooth to="/team#organizational-structure">Organizational Structure</HashLink>} >
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className="cursor-pointer text-(--accent-color)"
-                                    render={<HashLink smooth to="/team#present-team">Present Team</HashLink>} >
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className="cursor-pointer text-(--accent-color)"
-                                    render={<HashLink smooth to="/team#past-members">Past Members</HashLink>} >
-                                </DropdownMenuItem>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
-                    </li>
-                    {/* <li><HashLink smooth to="/#news" className="text-(--accent-color) hover:text-(--accent-hover) text-sm md:text-base">News</HashLink></li>
-                    <li><HashLink smooth to="/#membership" className="text-(--accent-color) hover:text-(--accent-hover) text-sm md:text-base">Membership</HashLink></li> */}
-                </ul>
+            <nav className="hidden md:block">
+                <NavigationMenuComponent componentMap={navigationMenuProps.componentMap} />
             </nav>
-            <a href="https://chat.whatsapp.com/EY0IqFnaRga8NAyUEFA4bD" target="_blank" className="bg-(--accent-color) text-white text-xs md:text-sm rounded-full font-body cursor-pointer py-2 px-4 transition duration-300 hover:bg-(--accent-hover)">
+            <MobileNavigation componentMap={navigationMenuProps.componentMap} />
+            <a href="https://chat.whatsapp.com/EY0IqFnaRga8NAyUEFA4bD" target="_blank" className="bg-(--accent-color) hidden md:block text-white text-xs md:text-sm rounded-full font-body cursor-pointer py-2 px-4 transition duration-300 hover:bg-(--accent-hover)">
                 Join OGA
             </a>
         </header>

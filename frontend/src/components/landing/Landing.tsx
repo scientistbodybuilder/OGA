@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 // import { useNavigate } from 'react-router-dom'
 
 
-import landingPhoto from '../assets/images/landing_img.png'
-import landingPhoto2 from '../assets/images/landing_img_2.png'
+import landingPhoto from '../../assets/images/landing_img.png'
+import landingPhoto2 from '../../assets/images/landing_img_2.png'
 //about icons
 import { GrMapLocation } from "react-icons/gr";
 import { TbTargetArrow } from "react-icons/tb";
@@ -16,16 +16,23 @@ import { GoPeople } from "react-icons/go";
 import { FaRegNewspaper } from "react-icons/fa6";
 
 //news images
-import isparc_2024 from '../assets/images/isparc-2024.png'
-import isparc_2026 from '../assets/images/isparc-2026.png'
+import isparc_2024 from '../../assets/images/isparc-2024.png'
+import isparc_2026 from '../../assets/images/isparc-2026.png'
 
 //membership images
 import { BiDonateHeart } from "react-icons/bi";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { PiHandsPraying } from "react-icons/pi";
 //partner images
-import msa_logo from '../assets/images/msa-logo.png'
+import msa_logo from '../../assets/images/msa-logo.png'
 import { HashLink } from 'react-router-hash-link';
+import UpcomingEvents from './UpcomingEvents';
+import ActionSection from './ActionSection';
+import Partners from './Partners';
+import Support from './Support'
+import Impact from './Impact';
+import About from './About';
+import History from './History'
 
 const partners = [
         msa_logo
@@ -75,9 +82,9 @@ const LandingPage = () => {
     },[landingIndex]);
 
     return (
-        <section className='w-full h-full min-h-screen flex flex-col overflow-y-auto bg-(--background-color) items-center justify-start'>
+        <section className='w-full space-y-16 h-full min-h-screen flex flex-col overflow-y-auto bg-(--background-color) pt-20 pb-10 px-4 sm:px-8 lg:px-10 items-center justify-start'>
            
-            <div id='home' className='w-full lg:w-11/12 h-auto flex items-center justify-center mt-16 py-12 px-4 xl:px-16'>
+            {/* <div id='home' className='w-full lg:w-11/12 h-auto flex items-center justify-center mt-16 py-12 px-4 xl:px-16'>
                 <div className='w-full h-full grid lg:grid-cols-2 gap-12 place-items-center'>
                     <div className='w-full h-full flex flex-col items-start justify-center gap-4 p-4'>
                         <h3 className='font-heading font-medium text-black text-4xl sm:text-5xl mb-2 sm:mb-0 md:text-4xl lg:text-5xl 2xl:text-7xl text-left max-h-[200px] md:max-h-[300px]  xl:max-h-full'>Awaken The Excellence Within. Forge the Future</h3>
@@ -113,9 +120,17 @@ const LandingPage = () => {
                     </div>
                 </div>
                 
-            </div>
+            </div> */}
 
-            <div id='about' className='w-full flex items-center justify-center bg-(--background-dark) h-auto px-4 xl:px-16 py-12'>
+            <ActionSection />
+
+            <About />
+
+            <History />
+
+            <Impact />
+
+            {/* <div id='about' className='w-full flex items-center justify-center bg-(--background-dark) h-auto px-4 xl:px-16 py-12'>
                 <div className='w-full lg:w-11/12 flex flex-col items-center justify-center gap-6'>
                     <div className='grid md:grid-cols-[400px_1fr] w-full gap-6'>
                         <div className='h-auto flex flex-col items-start justify-center gap-2'>
@@ -161,9 +176,9 @@ In sha Allahu ta’ala, with Allah’s Permission, together: we can SPARC Our Go
 
 
                 </div>
-            </div>
+            </div> */}
 
-            <div id='community' className='w-full flex flex-col items-center justify-center bg-(--background-color) h-auto px-4 xl:px-16 gap-6 py-12'>
+            {/* <div id='community' className='w-full flex flex-col items-center justify-center bg-(--background-color) h-auto px-4 xl:px-16 gap-6 py-12'>
                 <div className='font-body w-full lg:w-11/12 flex flex-col items-center justify-center gap-2'>
                     <h3 className='font-body text-lg md:text-xl text-(--neutral) font-medium tracking-widest '>COMMUNITY</h3>
                     <p className='font-body text-(--accent) text-sm md:text-base mb-8'>The OGA community strives to provide all the following for our fellow Muslims</p>
@@ -210,216 +225,13 @@ In sha Allahu ta’ala, with Allah’s Permission, together: we can SPARC Our Go
                     </div>
                 </div>
                 
-            </div>
-            
-            {/* <div id='testimonials' className='font-body w-full flex flex-col items-center justify-center bg-white h-auto py-12'>
-                
-                    <div className='font-body w-full h-auto flex flex-col lg:flex-row gap-12 md:gap-2 items-center justify-start relative'>
-                        <div className='flex flex-col items-center justify-center lg:absolute lg:left-[50%] lg:-translate-x-1/2 lg:top-1 '>
-                            <h3 className='font-body text-lg md:text-xl font-semibold tracking-widest mb-1'>TESTIMONIALS</h3>
-                            <p className='font-body text-sm xl:text-base text-center mb-6 md:mb-0'>Hear what our customers say about us</p>
-                        </div>
-
-                        <div className='font-body flex flex-col gap-2 items-center justify-center h-auto w-full lg:w-2/5 mb-6 md:mb-0 relative'>
-                            <div className='font-body flex flex-col items-start justify-center h-auto mb-8'>
-                                <img className='font-body h-96 md:h-[410px] lg:h-[400px] xl:h-[420px] object-cover w-80 md:w-[410px] lg:w-80 2xl:w-96 z-10 mt-16 mb-1' src={testimonials[testimonialIndex].image} />
-
-                                <p className='font-body text-white font-medium text-2xl md:text-xl xl:text-2xl z-10'>{testimonials
-                                    [testimonialIndex].name}</p>
-
-                                <p className='font-body text-white text-lg z-10'>{testimonials
-                                    [testimonialIndex]?.country}</p>
-                            </div>
-                            
-
-                            <div className='font-body h-full w-7/12 lg:w-2/3 self-start bg-gradient-to-b absolute top-0 from-[#1a7071] to-[#32E1E5] min-h-[550px]'>
-
-                            </div>
-                        </div>
-
-                        <div className='w-10/12 lg:w-1/2 xl:w-2/5 h-auto flex flex-col items-center justify-center mb-1 relative md:mt-8'>
-                            <div className='w-full flex flex-col items-center justify-center relative h-auto py-10'>
-                                <BiSolidQuoteLeft className="text-[var(--secondary-color)] h-16 w-16 absolute top-2 left-2" />
-                                <h3 className='font-body text-[var(--secondary-color)] font-bold text-4xl md:text-5xl mt-8 text-center'>{testimonials[testimonialIndex].header}</h3>
-                                <h4 className='font-body text-gray-500 font-medium text-base md:text-lg xl:text-xl mb-8 text-center'>{testimonials[testimonialIndex].content}</h4>
-                                <BiSolidQuoteRight className="text-[var(--secondary-color)] h-16 w-16 absolute right-2 bottom-2" />
-                            </div>
-                            <TestimonialPagination 
-                                testimonialIndex={testimonialIndex}
-                                onIndexChange={setTestimonialIndex}
-                                />
-                        </div>      
-                    </div>
             </div> */}
 
-            {/* <div id='how-it-works' className='font-body w-full h-auto lg:h-screen flex flex-col items-center bg-[var(--medium-gray)] px-4 xl:px-16 py-12'>
-                <div className="font-body w-full h-auto lg:w-11/12 flex flex-col items-center justify-start">    
-                        <h3 className='font-body text-lg md:text-xl font-semibold tracking-widest self-start'>HOW IT WORKS</h3>
-                        <p className='font-body  text-lg text-gray-500 lg:text-xl text-center self-start'>Getting the tests you need should be effortless. Here is the simple process:</p>
-                        <button onClick={()=>navigate('/dashboard/All')} className='font-body text-white bg-[var(--secondary-color)] px-6 py-2 rounded-full mt-4 mb-8 self-start text-xl lg:text-2xl font-medium'>Get Started</button>
-                </div>                  
-                <div className='w-full h-full lg:w-11/12 flex flex-col lg:flex-row lg:justify-between gap-1 lg:gap-12 relative'>
+            <UpcomingEvents />
 
-                                    <svg
-                                    className="hidden 2xl:block absolute top-[-100px] left-0 w-full h-full pobody-events-none"
-                                    viewBox="0 0 800 500"
-                                    preserveAspectRatio="none"
-                                    >
-                                        <defs>
-                                            <filter id="shadow-2xl" x="-50%" y="-50%" width="200%" height="200%">
-                                            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
-                                            </filter>
-                                        </defs>
-                                    <path
-                                        className="stroke-cyan-500"
-                                        d="M 0 350 Q 150 350 200 300 Q 300 200 450 250 Q 550 300 650 50 "
-                                        strokeWidth="4"
-                                        fill="none"
-                                        filter="url(#shadow-2xl)"
-                                        strokeLinecap="round"
-                                    />
-                                    </svg>
+            <Support />
 
-                                    <svg
-                                    className="hidden lg:block 2xl:hidden absolute top-[-100px] left-0 w-full h-full pobody-events-none"
-                                    viewBox="0 0 800 500"
-                                    preserveAspectRatio="none"
-                                    >
-                                        <defs>
-                                            <filter id="shadow-lg" x="-50%" y="-50%" width="200%" height="200%">
-                                            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
-                                            </filter>
-                                        </defs>
-                                    <path
-                                        stroke="#06b6d4"
-                                        d="M 0 300 Q 150 350 200 300 Q 300 200 450 250 Q 550 300 650 50"
-                                        strokeWidth="4"
-                                        fill="none"
-                                        filter="url(#shadow-lg)"
-                                        strokeLinecap="round"
-                                    />
-                                    </svg>
-
-
-                                <svg 
-                                    className="lg:hidden absolute top-0 left-3 h-full pobody-events-none"
-                                    style={{ zIndex: 0 }}
-                                    preserveAspectRatio="none"
-                                    viewBox="0 0 100 600"
-                                >
-                                    <defs>
-                                        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                                        <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
-                                        </filter>
-                                    </defs>
-                                    <path
-                                    d="M 25 40 Q 40 150, 25 280 T 25 450"
-                                    stroke="#06b6d4"
-                                    strokeWidth="4"
-                                    fill="none"
-                                    strokeLinecap="round"
-                                    filter="url(#shadow)"
-                                    />
-                                </svg>
-                        
-                        <div className='w-auto lg:w-1/4 lg:self-end flex flex-col items-start justify-center md:gap-4 h-auto p-4 relative'>
-                            <h4 className='absolute text-gray-200 font-extrabold text-[130px] lg:text-[150px] xl:text-[180px] top-[-10px] lg:top-[-70px] xl:top-[-50px] right-2 lg:right-12 xl:right-20 z-0'>1</h4>
-                            <div className='bg-white rounded-xl w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center z-0 shadow-lg'><div className='bg-gray-300 rounded-full w-6 lg:w-8 h-6 lg:h-8 z-10'></div></div>
-                            <h3 className='font-body font-bold text-lg md:text-xl xl:text-2xl mb-1 z-10'>Order & Select</h3>
-
-                            <p className='font-body text-gray-500 text-base xl:text-lg text-left z-10'>
-                                You have control. Easily access our platform 24/7 to browse, select, and order your diagnostic tests from
-                                the facility of your choice. Book online or on-call from your location—wherever and whenever is convenient
-                                for you.
-                            </p>
-                        </div>
-
-                        <div className='w-auto lg:w-1/4 lg:self-center flex flex-col items-start justify-center gap-1 h-auto p-4 relative'>
-                            <h4 className='absolute text-gray-200 font-extrabold text-[130px] lg:text-[150px] xl:text-[180px] top-[-15px] lg:top-[-100px] xl:top-[-70px] right-2 lg:right-6 xl:right-8 2xl:right-4 z-0'>2</h4>
-                            <div className='bg-white rounded-xl w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center z-0 shadow-lg'><div className='bg-gray-300 rounded-full w-6 lg:w-8 h-6 lg:h-8 z-10'></div></div>
-                            <h3 className='font-body font-bold text-lg md:text-xl xl:text-2xl mb-1 z-10'>Collect & Transport</h3>
-                            <p className='font-body text-gray-500 text-base xl:text-lg text-left z-10'>
-                                We come to you. A qualified, certified professional will collect your sample at your preferred location
-                                (health facility, home, office, etc.) at the scheduled time and ensure its secure and prompt transport to the lab.
-                            </p>
-                        </div>
-
-                        <div className='w-auto lg:w-1/4 lg:self-start flex flex-col items-start justify-center gap-1 h-auto p-4 relative'>
-                            <h4 className='absolute text-gray-200 font-extrabold text-[130px] lg:text-[150px] xl:text-[180px] top-[-15px] lg:top-[-110px] xl:top-[-70px] right-2 z-0'>3</h4>
-                            <div className='bg-white rounded-xl w-12 lg:w-16 h-12 lg:h-16 flex items-center justify-center z-0 shadow-lg'><div className='bg-gray-300 rounded-full w-6 lg:w-8 h-6 lg:h-8 z-10'></div></div>
-                            <h3 className='font-body font-bold text-lg md:text-xl xl:text-2xl mb-1 z-10'>Receive Results</h3>
-
-                            <p className='font-body text-gray-500 text-base xl:text-lg text-left z-10'>
-                                Results, fast. Receive your lab results quickly and securely through the CO-LAB platforms on your device.
-                                You'll get instant notification the moment they are available.
-                            </p>
-                        </div>
-                
-                </div>
-
-                
-
-            </div> */}
-
-            <div id='our_team' className='font-body w-full flex flex-col items-center justify-center bg-(--background-dark) h-auto px-4 xl:px-16 py-12'>
-                
-            </div>
-
-
-            <div id='news' className='font-body w-full flex flex-col items-center justify-center bg-(--background-color) h-auto px-4 xl:px-16 py-12'>
-                <div className='font-body w-full lg:w-11/12 flex flex-col items-center justify-center'>
-                                    <h3 className='font-body text-lg md:text-xl font-medium text-(--neutral) tracking-widest'>LATEST NEWS</h3>
-                                    <p className='font-body  text-sm text-(--accent-color) lg:text-base text-center'>Read more about what's been going on!</p>
-                                    
-                                    <div className='font-body flex overflow-x-auto w-full h-auto no-scrollbar relative wrapper justify-start items-center'>
-                                        {/* <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[var(--medium-gray)] to-transparent pobody-events-none z-10"></div> */}
-
-                                        <div className='font-body flex animate-scroll'>
-                                            <div className='font-body h-auto flex items-center justify-center gap-6 mt-4 pr-6 py-10'>
-                                                {news?.map((item, index) => {
-                                                    return (
-                                                        <div key={`${index}.1`} className='font-body flex flex-col items-center justify-start h-auto w-80 border border-[#ccc] rounded-[4px]'>
-                                                            <div className='w-full h-52'>
-                                                                <img src={item.image} className='font-body h-full w-full object-cover rounded-t-[4px]' />
-                                                            </div>
-                                                            
-                                                            <div className='font-body bg-(--background-light) h-28 w-full flex flex-col gap-1 py-1 px-4 items-start justify-center rounded-b-[4px]'>
-                                                                <h3 className='font-heading text-center text-xs md:text-base xl:text-lg text-black'>{item.hook}</h3>
-                                                                <p className='font-body text-center font-medium cursor-pointer text-xs md:text-sm text-(--accent-color)'>Read More</p>
-                                                            </div>
-                                                        </div>
-                                                    )
-                                                })}
-                                            </div>
-
-                                            <div className='font-body h-auto flex items-center justify-center gap-6 mt-4 pr-6 py-10'>
-                                                {news?.map((item, index) => {
-                                                    return (
-                                                        <div key={`${index}.1`} className='font-body flex flex-col items-center justify-start h-auto w-80 border border-[#ccc] rounded-[4px]'>
-                                                            <div className='w-full h-52'>
-                                                                <img src={item.image} className='font-body h-full w-full object-cover rounded-t-[4px]' />
-                                                            </div>
-                                                            
-                                                            <div className='font-body bg-(--background-light) h-28 w-full flex flex-col gap-1 py-1 px-4 items-start justify-center rounded-b-[4px]'>
-                                                                <h3 className='font-heading text-center text-xs md:text-base xl:text-lg text-black'>{item.hook}</h3>
-                                                                <p className='font-body text-center font-medium cursor-pointer text-xs md:text-sm text-(--accent-color)'>Read More</p>
-                                                            </div>
-                                                        </div>
-                                                    )
-                                                })}
-                                            </div>
-
-                                        
-                                        </div>
-                                        {/* <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[var(--medium-gray)] to-transparent pointer-events-none z-10"></div> */}
-
-                                    </div>
-
-                </div>
-
-            </div>
-
-            <div id='membership' className='font-body w-full flex flex-col items-center justify-center bg-(--background-dark) h-auto px-4 xl:px-16 py-12'>
+            {/* <div id='membership' className='font-body w-full flex flex-col items-center justify-center h-auto px-4 xl:px-16 py-12'>
                     <div className='font-body w-full lg:w-11/12 flex flex-col items-center justify-center gap-2'>
                                 <h3 className='font-body text-lg md:text-xl font-medium tracking-widest text-(--neutral)'>SUPPORT US</h3>
                                 <p className='font-body  text-sm text-(--accent-color) lg:text-base text-center'>Alhamdulillah, there are many ways you can support OGA including</p>
@@ -457,9 +269,9 @@ In sha Allahu ta’ala, with Allah’s Permission, together: we can SPARC Our Go
                                 Become a Member
                             </button>
                     </div>
-            </div>
+            </div> */}
 
-            <div id='partners' className='font-body w-full flex flex-col items-center justify-center bg-(--background-color) h-auto px-4 xl:px-16 py-12'>
+            {/* <div id='partners' className='font-body w-full flex flex-col items-center justify-center bg-(--background-color) h-auto px-4 xl:px-16 py-12'>
                 <div className='font-body w-full lg:w-11/12 flex flex-col items-center justify-center'>
                                 <h3 className='font-body text-lg md:text-xl font-medium tracking-widest text-(--neutral)'>OUR PARTNERS</h3>
                                 <p className='font-body  text-sm text-(--accent-color) lg:text-base text-center'>See below a list of our trusted partners.</p>
@@ -473,7 +285,8 @@ In sha Allahu ta’ala, with Allah’s Permission, together: we can SPARC Our Go
                                 </div>
                 </div>
 
-            </div>
+            </div> */}
+            <Partners />
 
             {/* <div id='contact' className='font-body w-full flex flex-col items-center justify-center bg-white h-auto px-4 xl:px-16 pt-12'>
                 <div className='font-body w-full lg:w-11/12 xl:w-10/12 grid md:grid-cols-2 gap-8'>
