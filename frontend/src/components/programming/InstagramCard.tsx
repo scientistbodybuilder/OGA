@@ -14,6 +14,14 @@ const getInstagramEmbedUrl = (postUrl: string) => {
 	return url.toString()
 }
 
+// const getInstagramThumbnail = (postUrl: string) => {
+//   const url = new URL(postUrl)
+//   url.search = ''
+//   url.pathname = `${url.pathname.replace(/\/$/, '')}/media/`
+//   url.searchParams.set('size', 'l')
+//   return url.toString()
+// }
+
 
 const InstagramCard = ({ url }: { url: string }) => {
 
