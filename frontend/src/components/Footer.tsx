@@ -46,6 +46,7 @@ const Footer = () => {
               Copyright © 2026 Our Golden Age.
             </p>
             <p className='font-body text-sm text-(--accent-color)'>All Rights Reserved</p>
+            <a href="https://www.flaticon.com/free-icons/pin" className="text-xs text-(--accent-color) hover:text-(--accent-hover) transition-colors" title="pin icons">Pin icons created by Pixel perfect - Flaticon</a>
           </div>
 
           {/* Quick Links */}
