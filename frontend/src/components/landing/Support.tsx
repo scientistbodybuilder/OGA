@@ -7,7 +7,7 @@ import {
 import { BiDonateHeart } from "react-icons/bi";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { PiHandsPraying } from "react-icons/pi";
-import { Button } from '@/components/ui/button'
+// import { Button } from '@/components/ui/button'
 
 const support = [
     {
@@ -53,9 +53,9 @@ const Support = () => {
                 ))}
             </div>
 
-            <Button className="bg-(--accent-color) mt-4 text-white text-sm md:text-base rounded-full font-body cursor-pointer py-5 px-4 transition duration-300 hover:bg-(--accent-hover)">
+            <a target='_blank' href='https://docs.google.com/forms/d/e/1FAIpQLSdEJ3yzF5S11Vt49_4vlpMzN_Jhf9QiM-L3QZO1Bf92tZl5iA/closedform' className="bg-(--accent-color) mt-4 text-white text-sm md:text-base rounded-full font-body cursor-pointer py-3 px-4 transition duration-300 hover:bg-(--accent-hover)">
                 Become a Member
-            </Button>
+            </a>
 
         </section>
     )
