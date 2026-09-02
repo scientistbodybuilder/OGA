@@ -25,18 +25,18 @@ const ActionSection = () => {
         <div className='w-full max-w-[1100px] scroll-mt-20 flex flex-col items-center justify-start'>
             <div className='w-full h-full grid md:grid-cols-2 gap-12 place-items-center'>
                 <div className='w-full h-full flex flex-col items-start justify-center gap-4 p-4'>
-                    <h3 className='font-heading font-medium text-black text-4xl sm:text-5xl mb-2 sm:mb-0 md:text-3xl lg:text-4xl 2xl:text-5xl text-left max-h-[200px] md:max-h-[300px]  xl:max-h-full'>Igniting Our Next Generation of Muslim Leaders</h3>
+                    <h3 className='font-heading font-medium text-black text-4xl sm:text-5xl mb-2 sm:mb-0 md:text-3xl lg:text-4xl 2xl:text-5xl text-left max-h-[200px] md:max-h-[300px] leading-[1.2] xl:max-h-full'>Igniting Our Next Generation of Muslim Leaders</h3>
 
                     <h4 className='font-body text-xs sm:text-sm xl:text-base text-left text-(--accent-color)'> Our Golden Age is a sanctuary for high-achieving professionals seeking to harmonize their pursuit of modern excellence with the profound intellectual heritage of the Islamic tradition. Connect, grow, and lead. </h4>
 
                     <div className="flex items-center gap-4">
-                        <HashLink smooth to="/#membership" className="bg-(--accent-color) text-white font-body cursor-pointer py-2 px-4 transition duration-300 hover:bg-opacity-80">
+                        <HashLink smooth to="/#support" className="bg-(--accent-color) text-white font-body cursor-pointer py-2 px-4 transition duration-300 hover:bg-(--accent-hover)">
                             Become a Member
                         </HashLink>
 
-                        <HashLink smooth to="/#about" className="border border-color-(--accent-color) text-(--accent-color) font-body cursor-pointer py-2 px-4 transition duration-300">
+                        <a target="_blank" href="https://docs.google.com/document/d/1DNXZ_K3PUVbo4hfmdMlq9XCJHr1vVqJZlhd0BJFhDko/edit?tab=t.0" className="border border-color-(--accent-color) text-(--accent-color) font-body cursor-pointer py-2 px-4 hover:bg-[#f3ede7] transition duration-300">
                             Read the Constitution
-                        </HashLink>
+                        </a>
                     </div>
 
                 </div>
